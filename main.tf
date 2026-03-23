@@ -1,7 +1,5 @@
 provider "aws" {
   region     = "eu-north-1"
-  access_key = "AKIAZIUV7DJLQE3DN2ZB"
-  secret_key = "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"
 }
 
 resource "aws_security_group" "web_sg" {
