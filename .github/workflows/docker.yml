@@ -14,7 +14,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Lint HTML
-        run: echo "Lint check OK"
+        run: |
+          sudo apt update
+          sudo apt install -y tidy
+          tidy -e index.html
 
       - name: Set up Docker
         uses: docker/setup-buildx-action@v3
